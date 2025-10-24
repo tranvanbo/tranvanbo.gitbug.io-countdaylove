@@ -1,4 +1,4 @@
-const CACHE_NAME = 'love-day-counter-v1';
+const CACHE_NAME = 'love-day-counter-v2';
 
 // On install, cache the app shell
 self.addEventListener('install', event => {
@@ -6,8 +6,10 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME)
       .then(cache => {
         return cache.addAll([
-            '/',
-            '/index.html',
+            './',
+            './index.html',
+            './manifest.json',
+            './icon.svg'
         ]);
       })
   );
@@ -23,7 +25,7 @@ self.addEventListener('fetch', event => {
   // For navigation requests, use a network-first strategy to get the latest HTML.
   if (event.request.mode === 'navigate') {
     event.respondWith(
-      fetch(event.request).catch(() => caches.match('/index.html'))
+      fetch(event.request).catch(() => caches.match('./index.html'))
     );
     return;
   }
