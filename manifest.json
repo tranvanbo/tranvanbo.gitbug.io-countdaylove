@@ -1,0 +1,17 @@
+{
+  "name": "Love Day Counter",
+  "short_name": "LoveDays",
+  "description": "A beautiful and elegant web application to count the precious days of your relationship. Personalize it with your names, photos, and special date, and track upcoming milestones together.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff1f2",
+  "theme_color": "#f43f5e",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
